@@ -5,30 +5,30 @@ describe('Pokedex', function() {
       cy.contains('Pokémon and Pokémon character names are trademarks of Nintendo.')
     })
 
-    beforeEach(function() {    
-        cy.visit('http://localhost:5000')  
+    beforeEach(function() {
+      cy.visit('http://localhost:5000')
     })
 
     it('specific pokemon page can be opened', function() {
-        cy.contains('charizard').click()
-        cy.contains('solar power')
-        cy.contains('blaze')
+      cy.contains('charizard').click()
+      cy.contains('solar power')
+      cy.contains('blaze')
     })
 
     it('pokemon navigation works', function() {
-        cy.contains('charmeleon').click()
-        cy.contains('solar power')
-        cy.contains('blaze')
+      cy.contains('charmeleon').click()
+      cy.contains('solar power')
+      cy.contains('blaze')
 
-        cy.contains('Previous').click()
-        cy.contains('charmander')
+      cy.contains('Previous').click()
+      cy.contains('charmander')
 
-        cy.contains('Next').click()
-        cy.contains('Next').click()
-        cy.contains('charizard')
+      cy.contains('Next').click()
+      cy.contains('Next').click()
+      cy.contains('charizard')
 
-        cy.contains('Home').click()
-        cy.contains('squirtle')
+      cy.contains('Home').click()
+      cy.contains('squirtle')
     })
 
   })
